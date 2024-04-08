@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Home from "./pages/Home";
+import PageNotFound from "./layout/PageNotFound";
 
 import MainLayout from "./layout/MainLayout";
 
@@ -25,6 +26,10 @@ function App() {
           element: <Contact />,
         },
       ],
+    },
+    {
+      path: "*",
+      element: <PageNotFound />,
     },
   ]);
   return (
